@@ -1,42 +1,66 @@
 <style>
     .site-footer {
-        background-color: #f9fafb;
-        padding: 40px 0;
+        background-color: #ffffff;
+        padding: 30px 0;
         border-top: 1px solid #e5e7eb;
-        text-align: center;
         font-family: 'SolaimanLipi', Arial, sans-serif;
     }
+
+    /* কন্টেইনার যা ডেস্কটপে পাশাপাশি আনবে */
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column; /* মোবাইলে নিচে নিচে থাকবে */
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* ডেস্কটপ স্ক্রিনের জন্য (768px এর উপরে) */
+    @media (min-width: 768px) {
+        .footer-container {
+            flex-direction: row; /* পাশাপাশি আসবে */
+            justify-content: space-between; /* দুই মাথায় চলে যাবে */
+            text-align: left;
+        }
+    }
+
     .footer-text {
         color: #64748b;
-        font-size: 16px;
-        margin-bottom: 12px;
+        font-size: 18px;
+        margin: 0;
     }
+
     .footer-links {
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        gap: 25px;
         list-style: none;
         padding: 0;
         margin: 0;
     }
+
     .footer-links a {
         text-decoration: none;
         color: #64748b;
-        font-size: 14px;
+        font-size: 18px;
         transition: color 0.2s;
     }
+
     .footer-links a:hover {
-        color: #64748b;
+        color: #2563eb;
     }
 </style>
 
 <footer class="site-footer">
-    <div class="footer-text">
-        &copy; <span id="year">2025</span> Gyan.BD | All rights reserved.
+    <div class="footer-container">
+        <div class="footer-text">
+            © <span id="year">2025</span> জ্Gyan.BD | All rights reserved.
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">গোপনীয়তা নীতি</a></li>
+            <li><a href="#">শর্তাবলী</a></li>
+            <li><a href="#">যোগাযোগ</a></li>
+        </ul>
     </div>
-    <ul class="footer-links">
-        <li><a href="#">গোপনীয়তা নীতি</a></li>
-        <li><a href="#">শর্তাবলী</a></li>
-        <li><a href="#">যোগাযোগ</a></li>
-    </ul>
 </footer>
