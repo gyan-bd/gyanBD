@@ -454,7 +454,7 @@
                 </div>
             </div>
             <div style="margin-top: 80px; text-align: center; border-top: 1px solid #222; padding-top: 30px;">
-                <p>&copy; ২০২৫ Gyan.BD | জ্ঞান ও ঐতিহ্য সংরক্ষণে নিবেদিত।</p>
+                <p>&copy; <span id="copyright-year">2026</span> Gyan.BD | All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -463,6 +463,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
+        
+        // Auto-update copyright year
+        document.getElementById("copyright-year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
